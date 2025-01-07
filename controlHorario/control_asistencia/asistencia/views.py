@@ -12,14 +12,9 @@ def registrar_asistencia(request):
         form = AsistenciaForm(request.POST, request.FILES)
         if form.is_valid():
             asistencia = form.save(commit=False)
-            # Si la asistencia es diferida, guardar la fecha y hora manual
-            if asistencia.es_diferida and not asistencia.fecha_diferida:
-                # Aquí puedes decidir si mostrar un error si no se completó la fecha diferida
-                messages.error(request, 'Debes ingresar una fecha y hora si la asistencia es diferida.')
-            else:
-                asistencia.save()
-                messages.success(request, '¡Asistencia registrada con éxito!')
-                return redirect('registrar_asistencia')  # Redirigir para evitar reenvíos del formulario
+            asistencia.save()
+            messages.success(request, '¡Asistencia registrada con éxito!')
+            return redirect('registrar_asistencia')  # Redirigir para evitar reenvíos del formulario
     else:
         form = AsistenciaForm()
     return render(request, 'asistencia/registrar_asistencia.html', {'form': form})
