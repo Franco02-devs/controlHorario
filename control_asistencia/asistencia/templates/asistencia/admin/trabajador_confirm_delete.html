@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/trabajador_delete.css' %}">
+    <title>Eliminar Trabajador</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¿Estás seguro de que deseas eliminar este trabajador?</h1>
+        </header>
+
+        <div class="trabajador-info">
+            <p><strong>Nombre:</strong> {{ object.nombre }}</p>
+        </div>
+
+        <form method="post" class="confirmation-form">
+            {% csrf_token %}
+            <div class="form-actions">
+                <button type="submit" class="button delete-button">Sí, eliminar</button>
+                <a href="{% url 'trabajador_list' %}" class="button cancel-button">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

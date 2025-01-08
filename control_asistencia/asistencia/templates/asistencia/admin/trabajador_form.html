@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/trabajador_form.css' %}">
+    <title>{% block title %}Gestionar Trabajador{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{% block header %}Gestionar Trabajador{% endblock %}</h1>
+        </header>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="button save-button">Guardar</button>
+                <a href="{% url 'trabajador_list' %}" class="button cancel-button">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

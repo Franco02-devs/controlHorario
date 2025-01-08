@@ -1,0 +1,83 @@
+/* Reset */
+body, h1, p, form, div, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffefdb, #ffeee6);
+    color: #333;
+    padding: 40px 0;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #d32f2f;
+}
+
+/* Worker Info */
+.trabajador-info {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.trabajador-info strong {
+    color: #333;
+}
+
+/* Form Actions */
+.confirmation-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.cancel-button {
+    background-color: #2196f3;
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.cancel-button:hover {
+    background-color: #1976d2;
+}

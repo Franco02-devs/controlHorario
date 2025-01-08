@@ -1,0 +1,33 @@
+{% extends 'dashboard/base_generic.html' %}
+{% load static %} <!-- Aquí cargamos el tag static -->
+{% block content %}
+<div class="dashboard-container">
+    <h1>Menú de administrador</h1>
+    
+    <div class="tiles-container">
+        <!-- Tile de Gestionar Trabajadores -->
+        <a href="{% url 'trabajador_list' %}" class="tile">
+            <div class="tile-icon">
+                <img src="https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/photo1683313035.jpeg" alt="Gestionar Trabajadores">
+            </div>
+            <div class="tile-title">Gestionar Trabajadores</div>
+        </a>
+
+        <!-- Tile de Gestionar Asistencias -->
+        <a href="{% url 'gestionar_asistencias' %}" class="tile">
+            <div class="tile-icon">
+                <img src="https://www.buk.cl/hubfs/control-de-asistencia.jpg" alt="Gestionar Asistencias">
+            </div>
+            <div class="tile-title">Gestionar Asistencias</div>
+        </a>
+
+        <!-- Tile de Gestionar Errores -->
+        <a href="{% url 'gestionar_errores' %}" class="tile">
+            <div class="tile-icon">
+                <img src="https://definicion.de/wp-content/uploads/2009/02/error.png" alt="Gestionar Errores">
+            </div>
+            <div class="tile-title">Gestionar Errores</div>
+        </a>
+    </div>
+</div>
+{% endblock %}

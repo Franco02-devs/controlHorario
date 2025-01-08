@@ -1,0 +1,106 @@
+/* Reset */
+body, h1, ul, li, a, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e7ff 100%);
+    padding: 20px;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #2a3f9d;
+}
+
+.add-button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.add-button:hover {
+    background: #388e3c;
+}
+
+/* Trabajador List */
+.trabajador-list {
+    list-style: none;
+    padding: 0;
+}
+
+.trabajador-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #dde2f7;
+    border-radius: 8px;
+    background: #f8f9ff;
+    transition: background 0.3s ease;
+}
+
+.trabajador-item:hover {
+    background: #e8ebfd;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.edit-button {
+    background: #2196f3;
+}
+
+.edit-button:hover {
+    background: #1976d2;
+}
+
+.delete-button {
+    background: #f44336;
+}
+
+.delete-button:hover {
+    background: #d32f2f;
+}
+
+.no-trabajadores {
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}

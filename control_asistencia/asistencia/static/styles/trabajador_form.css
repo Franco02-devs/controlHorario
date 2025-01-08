@@ -1,0 +1,98 @@
+/* Reset */
+body, h1, form, div, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #e6e6f0);
+    color: #333;
+    padding: 40px 0;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #2a3f9d;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 25px;
+}
+
+form .field {
+    margin-bottom: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* Buttons */
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.save-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #388e3c;
+}
+
+.cancel-button {
+    background-color: #ff5722;
+    color: white;
+    margin-left: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #e64a19;
+}

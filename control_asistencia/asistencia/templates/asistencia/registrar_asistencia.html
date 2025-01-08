@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/asistencia_form.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Asistencia</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        <h1>Registrar Asistencia</h1>
+        {% csrf_token %}
+        
+        <!-- Mostrar mensajes de éxito o error -->
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {{ form.as_p }}
+        <button type="submit">Registrar Asistencia</button>
+    </form>
+</body>
+</html>

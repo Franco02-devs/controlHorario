@@ -1,0 +1,88 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de los tiles */
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Estilo de los tiles */
+.tile {
+    background-color: #3498db;
+    color: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tile-icon {
+    padding: 20px;
+    text-align: center;
+}
+
+.tile-icon img {
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.tile:hover .tile-icon img {
+    opacity: 0.6;
+}
+
+/* Estilo de los títulos */
+.tile-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .tiles-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tiles-container {
+        grid-template-columns: 1fr;
+    }
+}
