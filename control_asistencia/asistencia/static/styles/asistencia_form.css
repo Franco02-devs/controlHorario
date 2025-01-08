@@ -105,7 +105,7 @@ button:hover {
     border-radius: 2%;
 }
 
-.messages .alert {
+.alert {
     padding: 20px;
     border-radius: 8px;
     font-size: 1.2rem;
@@ -114,38 +114,19 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
-
-.messages .alert-success {
-    background-color: #28a745;
-    color: #ffffff;
-    border: 1px solid #218838;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease-in-out;
+.error{
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    color: #f01b04;
+    background-color: #f8d1d1;
 }
 
-.messages .alert-danger {
-    background-color: #dc3545;
-    color: #ffffff;
-    border: 1px solid #c82333;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease-in-out;
-}
 
-.messages .alert-info {
-    background-color: #17a2b8;
-    color: #ffffff;
-    border: 1px solid #138496;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.messages .alert-warning {
-    background-color: #ffc107;
-    color: #ffffff;
-    border: 1px solid #e0a800;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease-in-out;
-}
 
 /* Animación de aparición del mensaje */
 @keyframes fadeIn {

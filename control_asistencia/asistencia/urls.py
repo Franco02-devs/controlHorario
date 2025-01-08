@@ -13,5 +13,6 @@ urlpatterns = [
     path('gestionar-asistencias/', views.gestionar_asistencias, name='gestionar_asistencias'),
     path('gestionar-errores/', views.gestionar_errores, name='gestionar_errores'),
     path('exportar_asistencias/', views.exportar_asistencias_a_excel, name='exportar_asistencias'),
+    path('excel/', views.generar_excel_asistencias, name='excel'),
 
 ]

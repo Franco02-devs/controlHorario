@@ -14,3 +14,8 @@ class AsistenciaForm(forms.ModelForm):
     tipo = forms.ChoiceField(choices=Asistencia.elegirTipoRegistro, label="¿Es entrada o salida?")
     lugar = forms.ChoiceField(choices=Asistencia.elegirLugar, label="¿Estás en oficina o en campo?")
     foto = forms.ImageField(label="Sube una foto de la entrada o salida")
+    fecha_diferida = forms.DateTimeField(
+        required=False,
+        label="¿Fuera de tiempo? Registra tu fecha y hora de salida real si es necesario. Fecha Diferida",
+        widget=forms.DateTimeInput(attrs={'type': 'datetime-local'})
+    )
